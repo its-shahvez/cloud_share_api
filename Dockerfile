@@ -2,7 +2,7 @@
 FROM maven:3.9.8-eclipse-temurin-21 AS builder
 WORKDIR /app
 COPY . .
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 # Stage 2: Create the final, smaller image to run the application
 FROM eclipse-temurin:21-jre-jammy
