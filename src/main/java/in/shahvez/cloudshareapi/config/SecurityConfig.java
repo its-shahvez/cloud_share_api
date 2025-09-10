@@ -42,7 +42,7 @@ public class SecurityConfig {
 
     private UrlBasedCorsConfigurationSource  corsConfigurationSource(){
         CorsConfiguration confing = new CorsConfiguration();
-        confing.setAllowedOrigins(List.of("http://localhost:5173"));
+        confing.setAllowedOrigins(List.of("https://cloudsharingfile.netlify.app","http://localhost:5173"));
         confing.setAllowedMethods(List.of("GET","POST","PUT","PATCH","DELETE","OPTION"));
         confing.setAllowedHeaders(List.of("Authorization","Content-Type"));
         confing.setAllowCredentials(true);
